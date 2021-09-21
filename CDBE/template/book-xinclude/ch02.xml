@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
+  [
+    <!ENTITY % global.entities SYSTEM "file:///D:/obp/CDBE/custom/xml/cdbe.ent">
+    %global.entities;
+
+    <!ENTITY % entities SYSTEM "./common/entities.xml">
+    %entities;
+  ]
+  
+>
+<chapter xmlns:db="http://docbook.org/docbook-ng"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+         xml:id="ch02">
+  <title>Chapter title</title>
+  <para>Some Text</para>
+  
+  <xi:include href="ch02-1.xml"/>
+  <xi:include href="ch02-2.xml"/>
+</chapter>

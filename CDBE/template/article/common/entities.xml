@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ENTITY local_entity "local entity (defined per document)">
+<!ENTITY canonical-name 'Canonical Ltd.'>
+<!ENTITY project-name 'Some Documentation Project'>

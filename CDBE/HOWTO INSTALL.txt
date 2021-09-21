@@ -1,0 +1,4 @@
+1. unzip CDBE.zip to a directory.
+2. run CDBE\install.bat
+
+** Thanks  chen bin (chenbin.sh@gmail.com) made install.bat. **

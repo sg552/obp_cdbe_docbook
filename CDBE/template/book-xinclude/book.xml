@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
+  [
+    <!ENTITY % global.entities SYSTEM "file:///D:/obp/CDBE/custom/xml/cdbe.ent">
+    %global.entities;
+
+    <!ENTITY % entities SYSTEM "./common/entities.xml">
+    %entities;
+  ]
+  
+>
+<book xmlns:db="http://docbook.org/docbook-ng"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+      id="bookid"  lang="zh-CN">
+    <title>Title of the Book</title>
+    <subtitle>Subtitle of the book</subtitle>
+  <bookinfo>
+        <revhistory>
+            <revision>
+                <revnumber>VERSION NUMBER OF BOOK</revnumber>
+                <date>DATE</date>
+                <authorinitials>XX</authorinitials>
+                <revdescription>
+                    <para>DESCRIBE THIS REVISION</para>
+                </revdescription>
+            </revision>
+        </revhistory> 
+
+		<xi:include href="./common/copyright.xml"/>
+		<xi:include href="./common/disclaimer.xml"/>
+		<xi:include href="./common/legalnotice.xml"/>
+		<xi:include href="./common/publisher.xml"/>
+
+		<authorgroup>
+            <!-- ADD AUTHORS HERE -->
+            <author>
+                <firstname>NAME</firstname>
+                <surname>SURNAME</surname>
+                <!--<email>EMAIL ADDRESS</email>-->
+            </author>
+        </authorgroup>
+        <abstract>
+            <para>Short overview of the document.</para>
+        </abstract>
+  </bookinfo>
+
+  <xi:include href="preface.xml"/>
+  <xi:include href="ch00.xml"/>
+  <xi:include href="ch01.xml"/>
+  <xi:include href="ch02.xml"/>
+  <xi:include href="ch03.xml"/>
+  <xi:include href="ch04.xml"/>
+  <xi:include href="ch05.xml"/>
+  <xi:include href="ch06.xml"/>
+  <xi:include href="ch07.xml"/>
+  <xi:include href="ch08.xml"/>
+  <xi:include href="ch09.xml"/>
+  <xi:include href="ch10.xml"/>
+  <xi:include href="appendix.xml"/>
+  <xi:include href="glossary.xml"/>
+  <xi:include href="bibliography.xml"/>
+</book>

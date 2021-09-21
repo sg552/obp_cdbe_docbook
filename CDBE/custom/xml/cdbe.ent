@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- EXTERNAL URL RESOURCES -->
+<!ENTITY linmodem 'http://www.linmodems.org/' >
+<!ENTITY gnome 'http://www.gnome.org/' >
+<!ENTITY linuxorg 'http://www.linux.org/' >
+<!ENTITY ooo 'http://www.openoffice.org/' >
+<!ENTITY kde 'http://www.kde.org/' >
+<!ENTITY lugww 'http://lugww.counter.li.org/' >
+<!ENTITY ubuntu-watch 'http://distrowatch.com/ubuntu/' >
+<!ENTITY realplayer-download 'http://www.real.com/linux/' >
+<!ENTITY nvu-download 'http://www.nvu.com/download.html' >
+<!ENTITY sunjava-download 'http://java.sun.com/j2se/1.5.0/download.jsp'>
+<!ENTITY xorg 'http://www.x.org'>
+<!ENTITY dyndns 'http://www.dyndns.org' >
+<!ENTITY shoutcast 'http://www.shoutcast.com/' >
+<!ENTITY freedomtoaster 'http://www.freedomtoaster.org/' >
+<!ENTITY mozilla 'http://www.mozilla.org/' >
+<!ENTITY mozilla-firefox 'http://www.mozilla.org/products/firefox/' >
+<!ENTITY gnu 'http://www.gnu.org/' >
+<!ENTITY gnu-philosophy 'http://www.gnu.org/philsophy/' >
+<!ENTITY win4lin 'http://www.win4lin.com' >
+<!ENTITY codeweavers 'http://www.codeweavers.com' >
+<!ENTITY transgaming 'http://www.transgaming.com' >
+<!ENTITY kernel 'http://www.kernel.org'>
+<!ENTITY google 'http://www.google.com' >
+<!ENTITY kdelook ' http://www.kde-look.org' >
+<!ENTITY cedegacvshowto 'http://www.linux-gamers.net/modules/wfsection/article.php?articleid=45' >
+<!ENTITY transgamingwiki 'http://digital-conquest.ath.cx/wiki/index.php/Main_Page' >
+<!ENTITY open-source 'http://www.opensource.org/'>
+
+<!-- UBUNTU URL RESOURCES -->
+<!ENTITY ubuntu-packages 'http://packages.ubuntu.com/breezy' >
+<!ENTITY ubuntu-dpkgfile 'ubuntu5.10.tar' >
+<!ENTITY ubuntu-web 'http://www.ubuntu.com' >
+<!ENTITY ubuntu-main 'http://www.ubuntu.com' >
+<!ENTITY ubuntu-download 'http://www.ubuntu.com/download' >
+<!ENTITY ubuntu-forums 'http://www.ubuntulinux.org/community/forums' >
+<!ENTITY ubuntu-lists 'http://lists.ubuntu.com' >
+<!ENTITY ubuntu-wiki 'http://wiki.ubuntu.com' >
+<!ENTITY ubuntu-irc 'irc.freenode.net channel ubuntu' >
+<!ENTITY ubuntu-bugzilla 'http://bugzilla.ubuntu.com' >
+<!ENTITY ubuntu-paidsupport 'http://www.ubuntu.com/support/supportoptions/paidsupport' >
+<!ENTITY ubuntu-comments 'http://www.ubuntuforums.org/showthread.php?p=21787' >
+<!ENTITY ubuntu-documentation-site 'https://wiki.ubuntu.com/UserDocumentation' >
+<!ENTITY ubuntu-documentation-repos 'https://docteam.ubuntu.com/repos/trunk' >
+<!ENTITY ubuntu-doc-team 'https://wiki.ubuntu.com/DocumentationTeam' >
+<!ENTITY ubuntu-doc-list 'http://lists.ubuntu.com/mailman/listinfo/ubuntu-doc' >
+<!ENTITY ubuntu-shipit 'http://shipit.ubuntu.com' >
+<!ENTITY ubuntu-launchpad 'https://launchpad.ubuntu.com' >
+<!ENTITY ubuntu-rosetta 'https://launchpad.ubuntu.com/rosetta' >
+<!ENTITY ubuntu-planet 'http://planet.ubuntu.com' >
+<!ENTITY ubuntu-philosophy 'http://www.ubuntulinux.org/ubuntu/philosophy' >
+<!ENTITY ubuntu-participate 'http://www.ubuntu.com/community/participate/' >
+
+<!-- ******************************************
+  Standard Debian URLs
+  -->
+
+<!ENTITY www-debian-org "www.debian.org">
+<!ENTITY url-debian-home "http://&www-debian-org;/">
+
+<!ENTITY ftp-debian-org "ftp.debian.org">
+<!ENTITY url-debian-ftp "ftp://&ftp-debian-org;/">
+
+<!ENTITY url-d-i "http://&www-debian-org;/devel/debian-installer/">
+
+<!ENTITY d-i-alioth-debian-org "d-i.alioth.debian.org">
+<!ENTITY url-d-i-alioth "http://&d-i-alioth-debian-org;/">
+<!ENTITY url-d-i-alioth-manual "&url-d-i-alioth;manual/">
+
+<!ENTITY url-social-contract "http://&www-debian-org;/social_contract">
+<!ENTITY url-dfsg "&url-social-contract;#guidelines">
+
+<!ENTITY url-debian-policy "http://&www-debian-org;/doc/debian-policy/">
+
+<!ENTITY url-new-maintainer "http://&www-debian-org;/doc/maint-guide/">
+
+<!ENTITY url-debian-faq "http://&www-debian-org;/doc/FAQ/">
+
+<!ENTITY url-bts "http://bugs.debian.org/">
+<!ENTITY url-bts-debian-installer "&url-bts;cgi-bin/pkgreport.cgi?maint=debian-boot@lists.debian.org">
+
+<!-- broken for i386 (from the website, `i386 is not a port') -->
+<!ENTITY url-ports "http://&www-debian-org;/ports/&architecture;/">
+
+<!ENTITY email-debian-boot-list "debian-boot@lists.debian.org">
+
+<!-- base for the current distribution -->
+<!ENTITY disturlftp "ftp://&ftp-debian-org;/debian/dists/&releasename;/">
+<!ENTITY disturl    "http://http.us.debian.org/debian/dists/&releasename;/">
+
+<!-- base for unstable -->
+<!ENTITY url-dist-unstable "ftp://ftp.debian.org/debian/dists/unstable/">
+
+<!-- where to get the current debian-installer -->
+<!ENTITY url-debian-installer "&disturl;main/installer-&architecture;/current/">
+
+<!-- debian-installer CVSweb - OBSOLETED: should be removed when no longer used -->
+<!-- <!ENTITY url-d-i-cvsweb "http://svn.debian.org/viewcvs/d-i/"> -->
+<!ENTITY url-d-i-cvsweb "http://svn.debian.org/wsvn/d-i/">
+
+<!-- debian-installer WebSVN  -->
+<!ENTITY url-d-i-websvn "http://svn.debian.org/wsvn/d-i/">
+
+<!-- debian-installer README -->
+<!ENTITY url-d-i-readme "http://svn.debian.org/wsvn/d-i/README?op=file">
+
+<!-- instructions on where to get Debian -->
+<!ENTITY url-debian-distrib "http://&www-debian-org;/distrib/">
+
+<!-- General Debian CD pages -->
+<!ENTITY url-debian-cd "http://&www-debian-org;/CD/">
+
+<!-- vendors that sell Debian CDs -->
+<!ENTITY url-debian-cd-vendors "http://&www-debian-org;/CD/vendors/">
+
+<!-- Debian mirrors -->
+<!ENTITY url-debian-mirrors "http://&www-debian-org;/distrib/ftplist">
+
+<!-- an example mirror w/o trailing slash -->
+<!ENTITY url-debian-mirror-eg "http://mirrors.kernel.org/debian">
+
+<!-- release area off the Debian web site -->
+<!ENTITY url-release-area "http://&www-debian-org;/releases/&releasename;/">
+
+<!-- WNPP -->
+<!ENTITY url-wnpp "http://&www-debian-org;/devel/wnpp/">
+
+<!-- X strike force -->
+<!ENTITY url-x-strike-force "http://&www-debian-org;/~branden/">
+
+
+<!-- *************** Fedora common entities *************** -->
+<!ENTITY FP-URL "<ulink url='http://fedora.redhat.com/'>http://fedora.redhat.com/</ulink>"> <!-- Fedora Project URL -->
+<!ENTITY FDP-URL "<ulink url='http://fedora.redhat.com/projects/docs/'>http://fedora.redhat.com/projects/docs/</ulink>"> <!-- Fedora Docs Project URL -->
+<!ENTITY FDPDOCS-URL "<ulink url='http://fedora.redhat.com/docs/'>http://fedora.redhat.com/docs/</ulink>"> <!-- Fedora Documentation (repository) URL -->
+
+
+<!-- LEGAL URLs -->
+<!ENTITY gpl-url '<ulink url="http://www.gnu.org/licenses/gpl.html">GNU General Public License</ulink>'>
+<!ENTITY cc 'http://creativecommons.org/'>
+<!ENTITY cc-attrib '<ulink url="http://creativecommons.org/licenses/by-sa/2.0/">Attribution-ShareAlike 2.0</ulink>'>
+<!ENTITY cc-fulldeed-url 'http://creativecommons.org/licenses/by-sa/2.0/legalcode/'>
+<!ENTITY fdl-url '<ulink url="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License</ulink>'>
+<!ENTITY cc-disclaimer-url 'http://creativecommons.org/licenses/disclaimer-popup?lang=en'>
+
+
+
+

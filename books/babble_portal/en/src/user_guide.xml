@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter id ="user_guide">
+    <title>Babble Portal User Guide</title>
+    <sect1 id="overview"><title>Overview</title>
+    <para>From the root path, we can see that there are several links: 
+<orderedlist>
+    <listitem><para>Devices</para></listitem>
+    <listitem><para>Device Groups</para></listitem>
+    <listitem><para>Campaigns</para></listitem>
+    <listitem><para>Not common actions</para></listitem>
+    <listitem><para>Cloudsets Configuration</para></listitem>
+</orderedlist>
+shown as: <xref linkend="overview.png"/></para>
+<figure id="overview.png">
+    <title>Overview</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/overview.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect1>
+
+    <sect1 id="devices"><title>Devices </title>
+    <sect2><title>Devices List</title>
+        <para>shown as: <xref linkend="devices_list.png"/></para>
+<figure id="devices_list.png">
+    <title>Overview</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/devices_list.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    <sect2><title>Devices: New or Edit </title>
+        <para>shown as: <xref linkend="devices_new.png"/></para>
+<figure id="devices_new.png">
+    <title>Mandatory field.</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/devices_new.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+        <para>shown as: <xref linkend="devices_new_message.png"/></para>
+<figure id="devices_new_message.png">
+    <title>Message for Invalid Email </title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/devices_new_message.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    </sect1>
+    <sect1 id="device_groups_list"><title>Device Groups: List , Edit</title>
+    <sect2><title>Device Groups: List</title>
+        <para></para>
+        <para>shown as: <xref linkend="device_group_list.png"/></para>
+<figure id="device_group_list.png">
+    <title>Device Group list</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/device_group_list.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    <sect2><title>Device Groups: New or Edit</title>
+        <para></para>
+        <para>shown as: <xref linkend="device_group_new.png"/></para>
+<figure id="device_group_new.png">
+    <title>New or Edit a device group</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/device_group_new.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    </sect1>
+
+    <sect1 id="device_groups_show"><title>Device Groups: Show, Select Devices, Edit DIFS settings</title>
+    <sect2><title>Device Groups: Show</title>
+        <para></para>
+        <para>shown as: <xref linkend="device_group_show.png"/></para>
+<figure id="device_group_show.png">
+    <title>Device Group's show page </title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/device_group_show.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    <sect2><title>Device Groups: Select Devices</title>
+        <para></para>
+        <para>shown as: <xref linkend="device_group_show_select_devices.png"/></para>
+<figure id="device_group_show_select_devices.png">
+    <title>Adding devices to Group</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/device_group_show_select_devices.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+        <para>shown as: <xref linkend="device_group_show_select_devices_done.png"/></para>
+<figure id="device_group_show_select_devices_done.png">
+    <title>Devices were added to the Group</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/device_group_show_select_devices_done.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    <sect2><title>Device Groups: Edit DIFS settings</title>
+        <para></para>
+        <para>shown as: <xref linkend="device_group_show_edit_difs_settings.png"/></para>
+<figure id="device_group_show_edit_difs_settings.png">
+    <title>Edit DIFS settings in a Device Group</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/device_group_show_edit_difs_settings.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    </sect1>
+    <sect1 id="campaigns"><title>Campaigns</title>
+    <sect2><title>Campaigns: List</title>
+        <para></para>
+        <para>shown as: <xref linkend="campaign_list.png"/></para>
+<figure id="campaign_list.png">
+    <title>Campaigns List</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/campaign_list.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    <sect2><title>Campaigns: Change target cloudset</title>
+        <para></para>
+        <para>shown as: <xref linkend="campaign_list_change_cloudset.png"/></para>
+<figure id="campaign_list_change_cloudset.png">
+    <title>Change target cloudset</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/campaign_list_change_cloudset.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    <sect2><title>Campaigns: Confirm push</title>
+        <para></para>
+        <para>shown as: <xref linkend="campaign_list_change_confirm_push.png"/></para>
+<figure id="campaign_list_change_confirm_push.png">
+    <title>Confirm "push" operation</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/campaign_list_change_confirm_push.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    </sect1>
+
+    <sect1 id="push_result">
+        <title>Push Result</title>
+    <sect2 id="push_result_overview"><title>Overview</title>
+        <para></para>
+        <para>shown as: <xref linkend="push_result_overview.png"/></para>
+<figure id="push_result_overview.png">
+    <title>Push result overview</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/push_result_overview.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    <sect2 id="push_result_successful"><title>Successful</title>
+        <para></para>
+        <para>shown as: <xref linkend="push_result_successful.png"/></para>
+<figure id="push_result_successful.png">
+    <title>Successfully pushed devices</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/push_result_successful.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    <sect2 id="push_result_failed"><title>Failed</title>
+        <para></para>
+        <para>shown as: <xref linkend="push_result_failed.png"/></para>
+<figure id="push_result_failed.png">
+    <title>Failed to be pushed devices</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/push_result_failed.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    <sect2 id="push_result_nonexistent"><title>Nonexistent</title>
+        <para></para>
+        <para>shown as: <xref linkend="push_result_nonexistent.png"/></para>
+<figure id="push_result_nonexistent.png">
+    <title>Nonexistent devices</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/push_result_nonexistent.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    </sect1>
+
+    <sect1 id="cloudsets"><title>Cloudsets</title>
+    <sect2><title>Cloudsets: List</title>
+        <para></para>
+        <para>shown as: <xref linkend="cloudset_list.png"/></para>
+<figure id="cloudset_list.png">
+    <title>Cloudsets List</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/cloudset_list.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    <sect2><title>Cloudsets: Edit</title>
+        <para></para>
+        <para>shown as: <xref linkend="cloudset_edit.png"/></para>
+<figure id="cloudset_edit.png">
+    <title>Cloudsets Edit</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/cloudset_edit.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    <sect2><title>Cloudsets: Show</title>
+        <para></para>
+        <para>shown as: <xref linkend="cloudset_show.png"/></para>
+<figure id="cloudset_show.png">
+    <title>Cloudsets Show</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/cloudset_show.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    <sect2><title>Cloudsets: Set Default</title>
+        <para></para>
+        <para>shown as: <xref linkend="cloudset_set_default.png"/></para>
+<figure id="cloudset_set_default.png">
+    <title>Cloudsets Set Default</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/cloudset_set_default.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    <sect2><title>Cloudsets: Synchorinize</title>
+        <para></para>
+        <para>shown as: <xref linkend="cloudset_sync.png"/></para>
+<figure id="cloudset_sync.png">
+    <title>Cloudsets: Synchorinize </title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/cloudset_sync.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    <sect2><title>Cloudsets: Test</title>
+        <para></para>
+        <para>shown as: <xref linkend="cloudset_test_good.png"/></para>
+<figure id="cloudset_test_good.png">
+    <title>Test Result: success.</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/cloudset_test_good.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+        <para></para>
+        <para>shown as: <xref linkend="cloudset_test_bad_password.png"/></para>
+<figure id="cloudset_test_bad_password.png">
+    <title>Test Result: Bad password.</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/cloudset_test_bad_password.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+        <para></para>
+        <para>shown as: <xref linkend="cloudset_test_bad_connection.png"/></para>
+<figure id="cloudset_test_bad_connection.png">
+    <title>Test Result: Bad connection.</title>
+    <mediaobject>
+    <imageobject>
+    <imagedata fileref='figure/cloudset_test_bad_connection.png' format="PNG" align="center"/>
+    </imageobject>
+    </mediaobject>
+</figure>
+    </sect2>
+    </sect1>
+</chapter>

@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+
+<!-- Specifying this DOCTYPE will *not* cause the XML catalog parser
+     to download catalog.dtd from the Web. -->
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.0//EN"
+"http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"  prefer="public">
+
+<group  xml:base="file:///D:/obp/CDBE/dtd/dblite-0.5/" >
+	<public 
+	   publicId="-//ORA//DTD DBLite XML//EN"
+	   uri="dblite.dtd"/>
+
+	<system
+	   systemId="dblite.dtd" 
+	   uri="dblite.dtd"/>
+
+	<public 
+	   publicId="-//OASIS//DTD DocBook XML V4.1//EN"
+	   uri="docbook41/docbookx.dtd"/>
+</group>
+
+
+<public publicId="-//Norman Walsh//DTD Slides XML V3.4.0//EN"
+        uri="file:///D:/obp/CDBE/dtd/docbook-slides-3.4.0/schema/dtd/slides.dtd"/>
+
+<rewriteURI
+        uriStartString="http://docbook.sourceforge.net/release/xsl/current/"
+        rewritePrefix="file:///D:/obp/CDBE/xsl/docbook-xsl-1.68.1/" />
+
+<nextCatalog  catalog="file:///D:/obp/CDBE/dtd/docbook-xml-4.4/catalog.xml" />
+
+<nextCatalog  catalog="file:///D:/obp/CDBE/dtd/docbook-xml-4.2/catalog.xml" />
+
+<nextCatalog  catalog="file:///D:/obp/CDBE/dtd/docbook-slides-3.4.0/catalog.xml" /> 
+
+<nextCatalog  catalog="file:///D:/obp/CDBE/dtd/docbook-website-2.6.0/catalog.xml" /> 
+
+<rewriteURI
+        uriStartString="http://docbook.sourceforge.net/release/website/2.5.0/"
+        rewritePrefix="file:///D:/obp/CDBE/dtd/docbook-website-2.6.0/" />
+
+<rewriteURI
+        uriStartString="http://docbook.sourceforge.net/release/website/2.4.1/"
+        rewritePrefix="file:///D:/obp/CDBE/dtd/docbook-website-2.6.0/" />
+
+<rewriteURI
+        uriStartString="http://docbook.sourceforge.net/release/website/2.4.0/"
+        rewritePrefix="file:///D:/obp/CDBE/dtd/docbook-website-2.6.0/" />
+
+<rewriteURI
+        uriStartString="http://docbook.sourceforge.net/release/website/2.3/"
+        rewritePrefix="file:///D:/obp/CDBE/dtd/docbook-website-2.6.0/" />
+
+<rewriteURI
+        uriStartString="http://docbook.sourceforge.net/release/website/2.2/"
+        rewritePrefix="file:///D:/obp/CDBE/dtd/docbook-website-2.6.0/" />
+
+<rewriteURI
+        uriStartString="http://docbook.sourceforge.net/release/website/2.1/"
+        rewritePrefix="file:///D:/obp/CDBE/dtd/docbook-website-2.6.0/" />
+
+<rewriteURI
+        uriStartString="http://docbook.sourceforge.net/release/website/2.0/"
+        rewritePrefix="file:///D:/obp/CDBE/dtd/docbook-website-2.6.0/" />
+
+</catalog>

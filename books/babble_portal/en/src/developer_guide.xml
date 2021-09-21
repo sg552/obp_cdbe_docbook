@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter id ="developer_guide">
+    <title>Babble Portal Developer Guide</title>
+    <sect1 id="overview"><title>Overview</title>
+    </sect1>
+    <sect1 id="jquery_issue"><title>about jquery</title>
+        <para>
+always set 'csrf_meta_tag' in the application layout. 
+otherwise you can't 'post' or 'delete' a ajax request which is under 'Authorizer'
+        </para>
+    </sect1>
+    <sect1 id="select_checkboxes_across_pagination">
+        <title>Select checkboxes across pagination</title>
+    <para>
+    TODO: make it a jquery plugin, usage: 
+    jQuery.checkbox_across_pagination()
+    or 
+    jQuery("#some_div checkbox").checkbox_across_pagination()
+    </para>
+    <para>
+    I have googled around for an existence sulocation, e.g. a ruby gem,
+    or a jQuery component, however there's no result. only some 
+    ideas and code segements which is not resuable for us.
+    </para>
+    <para>
+    For this reason, I have to implement it for our own. the basical 
+    idea is to store the checked items in a cookie. everytime the pagination
+    reloaded, the page reads the cookie and determine if any checkboxes 
+    need to be checked or not.
+    (one restriction: using  cookie we only have about 2k bytes , about 700 ids ,
+    so if you want more space(e.g when you want to 'check all'), please use a more powerful plugin, or 
+    store the ids in session )   
+    </para>
+0. for a live example,see:  device_group's show page.        
+URL: http://configfun.pcs.mot.com/babble_portal/device_groups/12
+0. declar the javascript file's reference.
+<programlisting> <![CDATA[
+<%= javascript_include_tag 'jquery/jquery.cookie.array_support.js" %>
+]]></programlisting>
+
+1. in the target page(where the pagination is), use a cookie list to store the ids.
+<programlisting> <![CDATA[
+<script type="text/javascript">
+function init_cookie(){
+  new cookieList('checked_devices_id').clear()
+  <% for device in @device_group.devices %>
+    new cookieList("checked_devices_id").add(<%= device.id %>)
+  <% end %>
+}
+</script>
+]]></programlisting>
+2. declear the hidden input field, and the form submit's event: 
+<programlisting> <![CDATA[
+<%= form_tag update_member_devices_device_group_path(@device_group.id), 
+  :method => :put do %>
+  <%= hidden_field_tag "device_ids[]" %>
+<div style="width:290px;" class="center">
+  <%= submit_tag "Submit", :class=>"dialog_button" %>
+  <%= button_to_function "Cancel", "close_dialog()", :class=>"dialog_button" %>
+</div>
+<% end %>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#device_ids_").closest("form").submit(function(){
+    $("#device_ids_").val(new cookieList("checked_devices_id").items())
+  })
+})
+</script>
+]]></programlisting>
+
+3. keep the selected checkboxes across pagination.
+in the list page, 
+<programlisting> <![CDATA[
+    data_table_<%= css_class %> = $(this).addClass("display").dataTable({
+      bJQueryUI: true,
+      bProcessing: true,
+      // other options ...
+      fnDrawCallback: function(){
+         $("input:checkbox[name=email_providers[]]").each(function(){
+           is_checked_item = ($.inArray($(this).val(), new cookieList("checked_ids").items()) > 0 ) 
+           if(is_checked_item) {
+             $(this).attr("checked", true)
+           }
+         })
+        //init the events for every checkboxes
+        // related method: init_cookie() in device_group#show page.
+        $("input:checkbox[name=device_id]").click(function(){
+          this_value= $(this).val()
+          $(this).attr("checked") ?
+            new cookieList("checked_devices_id").add(this_value) :
+            new cookieList("checked_devices_id").remove(this_value)
+        })
+      }
+    })
+]]></programlisting>
+    </sect1>
+    <sect1 id="authentication_and_authorization">
+        <title>Authentication and Authorization</title>
+        <sect2>
+            <title>LDAP</title>
+            <para>
+different LDAP config for different senarioes:
+intranet: (the same with Arkitek)
+dn: (
+
+extranet: (ou=Motorola Internal,ou=people,ou=extranet,dc=motorola,dc=com)
+            </para>
+            <para>
+some refferences:            
+http://services.mot.com/ldap/
+http://services.mot.com/ldap/environment/extranet_schema.shtml
+
+how to use a client program:
+http://compass.mot-mobility.com/go/226395157#entry_226390101
+            </para>
+        </sect2>
+    </sect1>
+    <sect1 id="data_table">
+        <title>Using dataTable for pagination, filtering, ordering </title>
+        <para>
+1. copy js file: jquery.dataTables.min.js
+        </para>
+        <para>
+2. copy css file:    data_table.css or data_table_jui.css
+        </para>
+        <para>
+3. create _list.html.erb file:
+<programlisting> <![CDATA[
+<%
+    unique_id ||= rand.to_s.gsub(/0\./, "")
+    css_class="devices_table_#{unique_id}"
+%>
+<table <%=raw("class=\"#{css_class}\"") %>> 
+  <thead>
+  <tr>
+    <th style="width:100px">Name</th>
+    <!-- columns for device list -->
+    <th style="width:200px">IMEI</th>
+    <th style="width:150px">Email</th>
+    <th style="width:70px">Account ID</th>
+    <th style="width:">Phone Number</th>
+    <!-- columns for push -->
+    <th>Information</th>
+    <th>Created at</th>
+
+    <!-- local operations: edit, destroy -->
+    <th style="width:80px">Operations</th>
+
+    <!-- local operations: select -->
+    <th style="width:80px">Selected</th>
+
+    <!-- remote operations: push, query -->
+    <th style="width:80px">Operations</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="10" class="dataTables_empty">
+      Loading data from server
+      </td>
+    </tr>
+  </tbody>
+</table>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".<%= css_class %>").each(function(){
+    data_table_<%= css_class %> = $(this).addClass("display").dataTable({
+      bJQueryUI: true,
+      bProcessing: true,
+      bServerSide: true,
+      sAjaxSource: "<%= list_data_devices_path(
+        :device_group_id => @device_group.try(:id),
+        :is_selectable => is_selectable,
+        :device_ids => device_ids
+        )  %>",
+      aoColumns: [
+        null, null, null, null, null, null,null,
+        {"asSorting": []},
+        {"asSorting": []},
+        {"asSorting": []}
+      ],
+      aoColumnDefs: [ { bVisible: false, aTargets: 
+        <% if is_to_push %>
+        [1,2,3,4,7,8] 
+        <% elsif is_selectable %>
+        [5,7,9]
+        <% else%>
+        [5,8,9]
+        <% end %>
+      }]
+    })
+  })
+
+})
+</script>
+]]></programlisting>
+        </para>
+        <para>
+4. in action: 
+<programlisting> <![CDATA[
+
+  # GET
+  def list_data
+    @echo = params["sEcho"]
+    @is_selectable = params["is_selectable"]
+    search = "%#{params["sSearch"]}%"
+    parent_id = params["device_group_id"]
+    device_ids = params["device_ids"]
+    @device_group = DeviceGroup.find(parent_id) if parent_id
+
+    #TODO extract a method: query devices in this group?  
+    if parent_id.blank? || !@is_selectable.blank? 
+      @devices = Device.where{
+        (name.like search) | (imei.like search ) | 
+        (email.like search) | (account_id.like search) |
+        (phone_number.like search) 
+      }  
+    elsif !parent_id.blank? && device_ids.blank?
+      @devices = Device.joins{device_members}.where{
+        (
+          (name.like search) | (imei.like search ) | 
+          (email.like search) | (account_id.like search) |
+          (phone_number.like search)
+        ) & device_members.device_group_id.eq(parent_id) 
+      }
+    elsif !parent_id.blank? && !device_ids.blank?
+      @devices = Device.joins{device_members}.where{
+        (
+          (name.like search) | (imei.like search ) | 
+          (email.like search) | (account_id.like search) |
+          (phone_number.like search)
+        ) & 
+        device_members.device_group_id.eq(parent_id) & 
+        device_members.device_id.in(device_ids)
+      }
+      
+    end
+    
+    @total_records = @devices.size
+
+    sorted_column_index = params["iSortCol_0"]
+    sorted_column_name = ["name","imei", "email", "account_id", 
+      "phone_number", "created_at"][sorted_column_index.to_i]
+    sorted_order = params["sSortDir_0"]
+
+    @devices = @devices.paginate(:page => get_page_number(params) ,
+      :per_page => params["iDisplayLength"],
+      :order => "#{sorted_column_name} #{sorted_order}"
+    )
+    respond_to do |format|
+      format.html { render :layout => false }
+      format.js { render :layout => false, :file => "devices/list_data.html.erb" }
+    end
+  end
+
+  private
+  def get_page_number(params)
+    result = params["iDisplayLength"].to_i == 0 ? 
+      1 :  
+      (params["iDisplayStart"].to_i / params["iDisplayLength"].to_i)
+    return result + 1
+  end
+  
+]]></programlisting>
+        </para>
+        <para>
+5. in its view:
+
+<programlisting> <![CDATA[
+<%
+  @data = [] 
+  for device in @devices
+#    info_link = %Q{ <pre style="margin:3px; text-align:left">#{device.information_to_push} </pre> }
+    info_link = raw(device.information_to_push) 
+    edit_link = raw(link_to_function 'Edit', "open_dialog('#{edit_device_path(device)}', { width: 350})" )
+    delete_link = raw(link_to 'Destroy', device, 
+      :confirm => 'Are you sure?', :method => :delete )
+
+    checkbox = @is_selectable.blank? ? 
+      "" : 
+      raw( check_box_tag "device_id", device.id, 
+        @device_group.devices.include?(device), :id => nil )
+    
+    push_link = raw(link_to "Push", push_device_path(device), 
+      :method => :post )
+    query_link = raw(link_to "Query", find_remote_ui_difs_settings_path(
+      :email => device.email ), :target => "_blank")
+
+    @data << "[\"#{device.name}\", 
+    \"#{device.imei}\", 
+    \"#{device.email}\", 
+    \"#{device.account_id}\", 
+    \"#{device.phone_number}\",
+    \"#{info_link.gsub('"', '\"')}\",
+    \"#{device.created_at}\", 
+    \"#{edit_link.gsub('"', '\"')} #{delete_link.gsub('"', '\"')}\",
+    \"#{checkbox.gsub('"', '\"')}\", 
+    \"#{push_link.gsub('"', '\"')} #{query_link.gsub('"', '\"')}\"
+    ]"
+  end
+%>
+{"sEcho": <%= raw @echo %>, 
+"iTotalRecords": <%= raw @devices.size%>, 
+"iTotalDisplayRecords": <%= raw @total_records %>, 
+"aaData": [<%= raw @data.join(",") %>]
+}    
+]]></programlisting>
+
+        </para>
+        <para>
+6. in rspec:
+
+<programlisting> <![CDATA[
+  describe "should get list_data " do
+    it "should list all the data " do 
+      get :list_data, :iDisplayLength => 10
+      assigns(:devices).size.should > 1 
+    end
+    it "should list the first device by its imei" do 
+      get :list_data, :sEcho => 1, :sSearch => Device.first.imei,
+        :iDisplayLength => 10
+      assigns(:devices).size.should == 1 
+    end
+  end
+]]></programlisting>
+        </para>
+    </sect1>
+
+</chapter>
+<!--
+<programlisting> <![CDATA[
+]]></programlisting>
+-->
