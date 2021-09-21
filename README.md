@@ -1,11 +1,11 @@
 # obp_cdbe_docbook
-OBP: Open Book Project?  CDBE:
+OBP: Open Book Project   
 
 算是对10年前的一个备份。
 
-今天整理硬盘，偶然看到了这个文件夹，想当年中二的时候，整理EX GF的短信都用这个Orz算是git book的早期探索品吧，很有价值。 官方网站已经被黑了。可以来这里查看：https://wiki.woodpecker.org.cn/moin/CDBE
+今天整理硬盘，偶然看到了这个文件夹，想当年中二的时候，整理EX GF的短信都用这个Orz算是git book的早期探索品吧，很有价值。 官方网站已经被黑了。可以来这里查看：https://wiki.woodpecker.org.cn/moin/CDBE   梁如军，Osmond 大神的作品，最初放在啄木鸟上。我从2007,2008年开始使用。
 
-此时此景，本想吟诗一首，不过看到窗外的晚霞和火烧云，内心无限感慨和凄凉。所以。。。算了吧。哎。39岁的人了。
+此时此景，本想吟诗一首，不过看到窗外的晚霞和火烧云(TODO 补上这个图），内心无限感慨和凄凉。所以。。。算了吧。哎。39岁的人了。
 
 ## 使用方式
 
